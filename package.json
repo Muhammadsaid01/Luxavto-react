@@ -11,9 +11,6 @@
     "@mui/lab": "^5.0.0-alpha.86",
     "@mui/material": "^7.3.7",
     "@reduxjs/toolkit": "^1.8.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
     "axios": "^0.27.2",
     "moment": "^2.29.4",
     "react": "^18.0.2",
@@ -22,6 +19,7 @@
     "react-router-dom": "5.3.4",
     "react-scripts": "5.0.1",
     "redux-logger": "^3.0.6",
+    "socket.io-client": "4.7.5",
     "styled-components": "^5.3.5",
     "sweetalert2": "^11.4.23",
     "swiper": "^8.3.1",
@@ -30,8 +28,8 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@types/socket.io-client": "^3.0.0",
     "@types/axios": "^0.14.4",
-    "@types/jest": "^27.5.2",
     "@types/node": "^17.0.45",
     "@types/react": "18",
     "@types/react-dom": "18",
@@ -44,13 +42,11 @@
     "start": "react-scripts start",
     "start:local": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -64,15 +60,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "jest": {
-    "transformIgnorePatterns": [
-      "node_modules/(?!(swiper|ssr-window|dom7)/)",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "moduleNameMapper": {
-      "^swiper/css(?:/.*)?$": "<rootDir>/src/test/styleMock.js"
-    }
   },
   "resolutions": {
     "@types/react": "18.3.29",

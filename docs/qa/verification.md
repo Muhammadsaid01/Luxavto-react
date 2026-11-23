@@ -1,3 +1,10 @@
+> **2026-10-20 tozalashi:** bu hujjat avvalgi tekshiruvlarning tarixiy qaydidir.
+> Avtomatik testlar, ularning sozlamalari va generatsiya qilingan JSON sinov
+> hisobotlari olib tashlandi. Matnli qaydlar, skrinshotlar va original video
+> metadata saqlandi. Ushbu tozalashdan keyin test, build, TypeScript, lint yoki
+> runtime tekshiruvlari bajarilmadi. Quyidagi tarixiy natijalar joriy holat
+> tekshirilganini anglatmaydi.
+
 # LuxAvto tekshiruv hisoboti — 2026-10-18
 
 Tekshiruv avvalgi hisobotni qayta tekshirishdan boshlandi. Mavjud foydalanuvchi
@@ -70,7 +77,7 @@ Yakuniy o‘tishda qayd etilgan **48 API** va **248 frontend asset** javobida
 Videolarda tekshirilgan DOM holatida MediaError yo‘q va katalog MP4lari
 readyState=4 edi; avtoijro alohida tasdiqlangan oqim sifatida e’lon qilinmaydi.
 
-[O‘lchovlar](browser-results.json), [mobil ko‘rinish](mobile.png),
+O‘lchovlar (generatsiya qilingan JSON hisobot 2026-10-20 tozalashida olib tashlangan), [mobil ko‘rinish](mobile.png),
 [desktop bosh sahifa](desktop.png), [mobil savat](cart.png).
 Skrinshotlar tekshiruv davomida, JSON o‘lchovlari yakuniy o‘tishda olindi.
 
@@ -237,7 +244,7 @@ bazasi yoki yozuvlari ishlatilmadi.
 **390, 768, 1280 va 1440 CSS px** da bosh sahifa, katalog, tafsilot, profil,
 buyurtmalar va yordam — **24 kombinatsiya** tekshirildi. Barchasida
 `scrollWidth === innerWidth`; yuklangan `<img>` lar orasida buzilgani va
-console error/warning yo‘q. [O‘lchovlar](homepage-browser-results.json).
+console error/warning yo‘q. O‘lchovlar (generatsiya qilingan JSON hisobot 2026-10-20 tozalashida olib tashlangan).
 Guest sessiya tekshiruvidagi 401 va ataylab berilgan 503 xatolari kutilgan;
 frontend asset so‘rovlarida 4xx/5xx kuzatilmadi. Video autoplay’iga sahifa
 boshlanishida tayanilmaydi: faqat play tugmasi bosilgandan keyingi ijro tekshirildi.
@@ -361,7 +368,7 @@ havolasi bor. Video yuklanish xatosining fallback’i avtomatik testda tekshiril
 brauzerda video network xatosi ataylab chaqirilmadi.
 
 [Asl fayl hash’lari va poster metadata](catalog-media.json),
-[haqiqiy brauzer ijro natijalari](catalog-video-browser.json).
+haqiqiy brauzer ijro natijalari (generatsiya qilingan JSON hisobot 2026-10-20 tozalashida olib tashlangan).
 
 ### Location: tasdiqlanmagan restoran manzili olib tashlandi
 
@@ -413,7 +420,7 @@ Katalog **390, 768, 1280, 1440 CSS px** da tekshirildi: kartalar 1/2/3/3,
 video grid 1/2/2/2 ustun. 390/768’da collapsible panel, desktopda sidebar.
 Homepage va detail ham 390/1440’da ko‘rildi: jami **8 layout kombinatsiyasi**da
 horizontal overflow, yuklangan buzilgan img va console error/warning yo‘q.
-[O‘lchovlar](catalog-browser-results.json). Ayrim dastlabki snapshotlarda hali
+O‘lchovlar (generatsiya qilingan JSON hisobot 2026-10-20 tozalashida olib tashlangan). Ayrim dastlabki snapshotlarda hali
 lazy-loadingdagi rasmlar alohida `pendingImages` sifatida yozilgan; ular broken
 deb hisoblanmagan. Yakuniy katalog skrinshotlarida barcha 11 ta img yuklangani
 va `naturalWidth > 0` ekani desktop/mobile’da alohida tasdiqlandi. Mobil ochiq
@@ -520,7 +527,7 @@ Hech qanday credential logga yoki ushbu hujjatga yozilmadi.
 | Umumiy footer | Homepage/catalog’da 390 va 1440 px: bittadan footer, overflow yo‘q; shartlar havolasi `/help#terms` ga ishladi |
 | Console / requests | Tekshiruvda console error/warning yoki kutilmagan failed request aniqlanmadi; guest `/member/detail` 401 kutilgan; frontend assetlarda 4xx/5xx yo‘q |
 
-[O‘lchovlar va FAQ dalillari](help-browser-results.json).
+O‘lchovlar va FAQ dalillari (generatsiya qilingan JSON hisobot 2026-10-20 tozalashida olib tashlangan).
 Homepage/catalog mobil snapshotlarida hali yuklanayotgan lazy rasmlar
 `pendingImages` sifatida qayd etildi, ular broken deb baholanmadi; desktop’da
 ular yuklangan. Help sahifasidagi rasmlar buzilmagan.
@@ -662,7 +669,7 @@ va ataylab 503 javoblari alohida qayd etilgan. Frontend statik asset logida
 aniqlanmadi. Ishlab chiqish buildidagi eski MUI/findDOMNode StrictMode
 deprecation warning’lari saqlanadi; dependency yangilanmadi.
 
-[Sanitizatsiyalangan browser request dalillari](connection-network.json),
+Sanitizatsiyalangan browser request dalillari (generatsiya qilingan JSON hisobot 2026-10-20 tozalashida olib tashlangan),
 [tiklangan haqiqiy homepage](connection-home.jpg),
 [izolatsiyalangan product detail](connection-detail.jpg).
 
@@ -814,8 +821,8 @@ holat tekshiruvi haqiqiy yakunlangan DELETE va fokus tiklanganini tasdiqladi.
 Bu application failure sifatida qayd etilmadi. Fault injection faqat vaqtinchalik
 proksida, ilova kodida yo‘q.
 
-[Raqamli layout dalillari](orders-browser-results.json),
-[API/DB natijalari](orders-api-results.json), [desktop](orders-desktop.jpg),
+Raqamli layout dalillari (generatsiya qilingan JSON hisobot 2026-10-20 tozalashida olib tashlangan),
+API/DB natijalari (generatsiya qilingan JSON hisobot 2026-10-20 tozalashida olib tashlangan), [desktop](orders-desktop.jpg),
 [desktop yuqori qism](orders-desktop-top.jpg), [mobil](orders-mobile.jpg),
 [mobil to‘liq sahifa](orders-mobile-full.jpg). Rasmlar **karta maydonlari bo‘sh**
 holatda olingan. Kiritilgan test karta raqami yoki CVV screenshot/report’da yo‘q.
@@ -964,7 +971,7 @@ kalibrlangan. **390, 768, 1280, 1440 × 900 CSS px** o‘lchandi:
 Artefaktlar (faqat test ma’lumotlari):
 [desktop to‘liq](profile-desktop.jpg), [desktop yuqori](profile-desktop-top.jpg),
 [mobil yuqori](profile-mobile.jpg), [mobil to‘liq](profile-mobile-full.jpg),
-[tuzilmali natijalar va maxfiy qiymatlarsiz network](profile-browser-results.json).
+tuzilmali natijalar va maxfiy qiymatlarsiz network (generatsiya qilingan JSON hisobot 2026-10-20 tozalashida olib tashlangan).
 
 ### Avtomatik tekshiruvlar va chegaralar
 

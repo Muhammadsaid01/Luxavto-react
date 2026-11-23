@@ -14,11 +14,6 @@ For the paired local setup use `npm run start:local` and open [http://localhost:
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -76,22 +71,23 @@ Authentication uses an HttpOnly API cookie; session restoration calls
 `GET /member/detail` and does not trust localStorage as authentication.
 See the backend README for HTTPS cookie settings and MongoDB replica-set requirements.
 
-Checks: `./node_modules/.bin/tsc --noEmit --incremental false`,
-`CI=true npm test -- --watchAll=false --runInBand`, and `npm run build`.
+Build and TypeScript tooling remain available: `npm run build` and
+`./node_modules/.bin/tsc --noEmit --incremental false`.
 Set `BUILD_PATH` to a temporary directory to keep an existing build unchanged.
-The Jest setup transforms real Swiper ESM modules and stubs only Swiper CSS;
-MUI/Swiper media-query APIs are supplied for jsdom.
+Dedicated automated tests, their setup, and the test script were removed during
+the 2026-10-20 cleanup. No tests, builds, lint, TypeScript, or runtime checks were
+performed for that cleanup.
 
 Yarn resolutions keep React/React DOM types on the existing React 18 versions,
-including transitive router/testing-library imports. Runtime packages were not
+including transitive router/UI imports. Runtime packages were not
 upgraded. Use `yarn install --frozen-lockfile` for a reproducible install.
 The TypeScript build worker is allocated 4096 MB to avoid CRA's 2048 MB heap limit.
-The older test/UI libraries may still emit React deprecation/peer warnings.
+The older UI libraries may still emit React deprecation/peer warnings.
 
 Payment remains a status-confirmation flow without a payment provider.
 The Help contact form has no contact service yet.
 
-The running-browser verification and its limitations are recorded in
+Historical running-browser verification and its limitations are recorded in
 [docs/qa/verification.md](docs/qa/verification.md), with viewport measurements
 and screenshots. The sibling backend README includes tested macOS foreground
 MongoDB replica-set startup instructions and explicit hostname/origin settings.
